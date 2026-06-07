@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pc-cleaner",
+  "version": "1.0.0",
+  "description": "Windows PC cleaner — scan and clean temp files, browser caches, recycle bin, software leftovers, large/duplicate files, and user directory junk. Conservative: scan first, confirm, then clean.",
+  "author": {
+    "name": "PC Cleaner",
+    "url": "https://github.com/<user>/pc-cleaner"
+  },
+  "homepage": "https://github.com/<user>/pc-cleaner",
+  "repository": "https://github.com/<user>/pc-cleaner",
+  "license": "MIT",
+  "keywords": ["windows", "cleaner", "powershell", "disk-cleanup", "system"],
+  "skills": [
+    "./skills/"
+  ]
+}

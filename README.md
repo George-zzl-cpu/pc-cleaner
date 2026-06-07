@@ -8,8 +8,15 @@
 # 1. 克隆仓库
 git clone https://github.com/<user>/pc-cleaner.git
 
-# 2. 安装到 Claude Code
-claude skills install /path/to/pc-cleaner/skills/pc-cleaner.md
+# 2. 初始化到 Claude Code 本地 skills 目录
+claude plugin init pc-cleaner
+
+# 3. 替换 scaffold 文件为实际内容
+cp -r pc-cleaner/scripts ~/.claude/skills/pc-cleaner/
+cp pc-cleaner/skills/pc-cleaner.md ~/.claude/skills/pc-cleaner/SKILL.md -Force
+
+# 4. 在 Claude Code 中重载插件
+#    在对话中输入: /reload-plugins
 ```
 
 ## 使用
