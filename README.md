@@ -6,7 +6,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/<user>/pc-cleaner.git
+git clone https://github.com/George-zzl-cpu/pc-cleaner.git
 
 # 2. 初始化到 Claude Code 本地 skills 目录
 claude plugin init pc-cleaner
