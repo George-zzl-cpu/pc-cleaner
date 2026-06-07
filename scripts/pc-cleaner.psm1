@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     PC Cleaner shared module — formatting, safety checks, and common utilities.
 .DESCRIPTION
@@ -54,8 +54,9 @@ function Test-SafePath {
         [System.Environment]::GetFolderPath('SystemX86')
     ) | Where-Object { $_ } | ForEach-Object { $_.TrimEnd('\').ToLowerInvariant() }
 
-    $normalized = (Resolve-Path $Path -ErrorAction SilentlyContinue).Path.TrimEnd('\').ToLowerInvariant()
-    if (-not $normalized) { return $false }
+    $resolved = Resolve-Path $Path -ErrorAction SilentlyContinue
+    if (-not $resolved) { return $false }
+    $normalized = $resolved.Path.TrimEnd('\').ToLowerInvariant()
     foreach ($b in $blocked) {
         if ($normalized -eq $b) { return $false }
     }
