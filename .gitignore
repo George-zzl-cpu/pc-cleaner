@@ -1,0 +1,18 @@
+# PowerShell
+*.ps1.xml
+*.psm1.xml
+*.ps1.xml.help.txt
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
